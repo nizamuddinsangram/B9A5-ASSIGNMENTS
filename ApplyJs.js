@@ -6,6 +6,10 @@ let count1 = 40;
 for (const seat of seats) {
   let selectedSeat = null;
   seat.addEventListener("click", function (event) {
+    if (count >= 4) {
+      alert("You can only purchase up to four tickets.");
+      return; // Exit the function if the maximum limit is reached
+    }
     // console.log("asi ra bai asi");
     count = count + 1;
     count1 = count1 - 1;
