@@ -9,6 +9,7 @@ for (const seat of seats) {
     // console.log("asi ra bai asi");
     count = count + 1;
     count1 = count1 - 1;
+    seat.style.backgroundColor = "#83C0C1";
     const ticketPrice =
       event.target.parentNode.parentNode.parentNode.parentNode.childNodes[5]
         .childNodes[3].childNodes[3].childNodes[0].innerText;
@@ -78,10 +79,26 @@ function applyDiscount(couponCode) {
   let totalCost = parseInt(totalCostElement.innerText);
   if (couponCode === "NEW15") {
     const discount = Math.floor(totalCost * 0.15);
+    // try to fixed discount
+    const discount1 = document.getElementById("discount");
+    const p = document.createElement("p");
+    const p1 = document.createElement("p");
+    p.innerHTML = "Discount";
+    p1.innerText = discount;
+    discount1.appendChild(p);
+    discount1.appendChild(p1);
+    //
     totalCost = totalCost - discount;
     btn.style.display = "none";
   } else if (couponCode === "Couple 20") {
     const discount = Math.floor(totalCost * 0.2);
+    const discount1 = document.getElementById("discount");
+    const p = document.createElement("p");
+    const p1 = document.createElement("p");
+    p.innerHTML = "Discount";
+    p1.innerText = discount;
+    discount1.appendChild(p);
+    discount1.appendChild(p1);
     totalCost = totalCost - discount;
     btn.style.display = "none";
   } else if (couponCode !== "NEW15" || couponCode !== "Couple 20") {
