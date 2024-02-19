@@ -73,7 +73,7 @@ function calculateTotalCoast(id, value) {
 
 function applyDiscount(couponCode) {
   //  add a funcality
-  const btn = document.getElementById("apply");
+  const btn = document.getElementById("gayeb");
   //
   const totalCostElement = document.getElementById("grand-total");
   let totalCost = parseInt(totalCostElement.innerText);
