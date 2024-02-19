@@ -1,7 +1,7 @@
 const seats = document.getElementsByClassName("seats");
 // console.log(seats);
 let count = 0;
-let count1 = 40;
+let count1 = 16;
 
 for (const seat of seats) {
   let selectedSeat = null;
@@ -11,6 +11,9 @@ for (const seat of seats) {
       return; // Exit the function if the maximum limit is reached
     }
     // console.log("asi ra bai asi");
+    seat.disabled = true;
+
+    //
     count = count + 1;
     count1 = count1 - 1;
     seat.style.backgroundColor = "#83C0C1";
