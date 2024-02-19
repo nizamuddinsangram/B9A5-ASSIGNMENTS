@@ -14,18 +14,21 @@ for (const seat of seats) {
     //     .childNodes[3].childNodes[3].childNodes[0].innerText
     // );
     // console.log(event.target.innerText);
+
     const buySeat = document.getElementById("append");
-    const li = document.createElement("li");
+    const div = document.createElement("div");
+    div.classList.add("myStyle");
     const p = document.createElement("p");
     p.innerText = ticketCategory;
-    // const p2 = document.createElement("p");
-    // p2.innerHTML = "Economy";
+    const p2 = document.createElement("p");
+    p2.innerHTML = "Economy";
     const p3 = document.createElement("p");
     p3.innerText = ticketPrice;
-    li.appendChild(p);
-    // buySeat.appendChild(p2);
-    li.appendChild(p3);
-    buySeat.appendChild(li);
+
+    div.appendChild(p);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    buySeat.appendChild(div);
 
     setInnerText("bookings-seats", count);
   });
